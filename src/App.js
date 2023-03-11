@@ -9,7 +9,7 @@ function App() {
   const[role,setRole] = useState('dev')
 
   return (
-    <div className="App bg-red-300">
+    <div className="App">
       
       {showEmployee ? (
         <>
@@ -17,8 +17,19 @@ function App() {
           console.log(e.target.value);
           setRole(e.target.value)
         }} />
-        <Employee name = "Ann" role="Intern"/>
-        <Employee name = "Anne" role ={role}/>
+        <div class = "flex flex-wrap">
+        <Employee name = "Ann" role="Intern" img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Anne" role ={role} img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Anne" role ={role} img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Ann" role="Intern" img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Anne" role ={role} img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Anne" role ={role} img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Ann" role="Intern" img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Anne" role ={role} img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+        <Employee name = "Anne" role ={role} img = "https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg"/>
+
+
+        </div>
         
         </>
 
