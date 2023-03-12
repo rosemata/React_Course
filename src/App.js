@@ -5,7 +5,6 @@ import {useState} from 'react';
 
 function App() {
   const showEmployee = true;
-  // let role = "dev"
   const[role,setRole] = useState('dev')
 
   const[employees, setEmployees] = useState([
@@ -52,10 +51,9 @@ function App() {
   ]);
 
   /*
-  update id, name, role
+  update the current id, name, role
   */
   function updateEmployee(id, newName, newRole) {
-    // console.log('update employee')
     const updatedEmployees = employees.map((employee) => {
       if (id == employee.id) {
         return {...employee, name: newName, role: newRole}
@@ -75,7 +73,6 @@ function App() {
         }} />
         <div className= "flex flex-wrap justify center">
         {employees.map((employee) => {
-          console.log(employee);
           return (
             <Employee 
               key={employee.id}

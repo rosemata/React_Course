@@ -7,7 +7,7 @@ function EditEmployee(props) {
   const [role, setRole] = useState(props.role);
   const [name, setName] = useState(props.name);
   const [show, setShow] = useState(false);
-
+  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
