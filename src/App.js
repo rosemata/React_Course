@@ -2,7 +2,6 @@
 import './index.css';
 import Employee from './components/employee';
 import {useState} from 'react';
-import {v4 as uuidv4} from 'uuid';
 
 function App() {
   const showEmployee = true;
@@ -10,7 +9,8 @@ function App() {
   const[role,setRole] = useState('dev')
 
   const[employees, setEmployees] = useState([
-    { id:1, 
+    { 
+      id:1, 
       name:'Anne', 
       role:'Recruiter', 
       img:"https://thumbs.dreamstime.com/b/beautiful-office-girl-busy-working-26681075.jpg",},
@@ -55,7 +55,15 @@ function App() {
   update id, name, role
   */
   function updateEmployee(id, newName, newRole) {
-    console.log('update employee')
+    // console.log('update employee')
+    const updatedEmployees = employees.map((employee) => {
+      if (id == employee.id) {
+        return {...employee, name: newName, role: newRole}
+      }
+
+      return employee;
+    });
+    setEmployees(updatedEmployees);
   }
 
   return (
@@ -65,7 +73,7 @@ function App() {
           console.log(e.target.value);
           setRole(e.target.value)
         }} />
-        <div className= "flex flex-wrap justify cebter">
+        <div className= "flex flex-wrap justify center">
         {employees.map((employee) => {
           console.log(employee);
           return (
