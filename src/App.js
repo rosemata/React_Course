@@ -2,6 +2,8 @@
 import './index.css';
 import Employee from './components/employee';
 import {useState} from 'react';
+import AddEmployee from './components/AddEmployee';
+import {v4 as uuidv4} from 'uuid';
 
 function App() {
   const showEmployee = true;
@@ -64,6 +66,19 @@ function App() {
     setEmployees(updatedEmployees);
   }
 
+  /*
+  add new employee
+  */
+ function newEmployee(name, role, image) {
+  const newEmployee={
+    id:uuidv4(),
+    name:name,
+    role:role,
+    img:image,
+  };
+  setEmployees([...employees, newEmployee])
+ }
+
   return (
     <div className="App">
       {showEmployee ? (<>
@@ -84,6 +99,7 @@ function App() {
             />);
           })}
         </div>
+        <AddEmployee newEmployee={newEmployee}/>
         </>
       ) : (
       <p>You can't see the employees</p>  
