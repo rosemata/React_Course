@@ -7,7 +7,7 @@ function EditEmployee(props) {
   const [role, setRole] = useState(props.role);
   const [name, setName] = useState(props.name);
   const [show, setShow] = useState(false);
-  
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -78,7 +78,8 @@ function EditEmployee(props) {
                     Close
                 </button>
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" form="editmodal">
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" form="editmodal"
+                    onClick={handleClose}>
                     Update
                 </button>
             </Modal.Footer>
