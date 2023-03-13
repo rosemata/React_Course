@@ -99,7 +99,8 @@ function App() {
             />);
           })}
         </div>
-        <AddEmployee newEmployee={newEmployee}/>
+        <AddEmployee newEmployee={newEmployee}
+        />
         </>
       ) : (
       <p>You can't see the employees</p>  

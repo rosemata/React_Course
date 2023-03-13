@@ -30,8 +30,13 @@ function AddEmployee(props) {
         </Modal.Header>
         <Modal.Body>
             <form onSubmit={(e) => {
+                    
                     e.preventDefault();
                     console.log("test update")
+                    setImage('https://www.google.com/')
+                    setRole('Position')
+                    setName('First Last')
+                    
                     props.newEmployee(name, role, img);
                 }}
 
